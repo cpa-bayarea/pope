@@ -1,0 +1,13 @@
+[flake8]
+ignore = D203
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    manage.py,
+    migrations,
+    settings,
+    venv,
+    falcon_back/__init__.py
+max-complexity = 10
