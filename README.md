@@ -1,5 +1,8 @@
 # PoPe - Portal de Pesquisas
 
+[![Build Status](https://travis-ci.org/fabricasoftwares/pope.svg?branch=dev)](https://travis-ci.org/fabricasoftwares/pope)
+[![Coverage Status](https://coveralls.io/repos/github/fabricasoftwares/pope/badge.svg?branch=dev)](https://coveralls.io/github/fabricasoftwares/pope?branch=master)
+
 Portal de pesquisa para serviços prestados por órgãos cadastrados.
 
 ## Virtualenv

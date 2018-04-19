@@ -1,0 +1,13 @@
+[run]
+include =
+  pope/*
+
+omit =
+  *migrations*
+
+[report]
+include =
+  pope/*
+
+omit =
+  *migrations*
