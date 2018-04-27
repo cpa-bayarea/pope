@@ -14,24 +14,10 @@ O virtualenv do python isola as dependências de cada `ambiente` criado por ele,
 
 ## Para instalar as dependências do projeto
 
-As dependências estão listadas no arquivo `requirements.txt`
-
 ```bash
-
-pip install -r requirements.txt
+./setup.py install
 
 ```
-
-## Para montar o banco de dados que será utilizado
-
-```bash
-
-cd /path/to/project
-
-./manage.py migrate
-
-```
-
 
 ## Para rodar a aplicação local
 
