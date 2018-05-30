@@ -1,6 +1,7 @@
 [run]
 include =
   pope/*
+  users/*
 
 omit =
   *migrations*
@@ -8,6 +9,7 @@ omit =
 [report]
 include =
   pope/*
+  users/*
 
 omit =
   *migrations*

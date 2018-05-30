@@ -1,7 +1,7 @@
 # PoPe - Portal de Pesquisas
 
-[![Build Status](https://travis-ci.org/fabricasoftwares/pope.svg?branch=dev)](https://travis-ci.org/fabricasoftwares/pope)
-[![Coverage Status](https://coveralls.io/repos/github/fabricasoftwares/pope/badge.svg?branch=dev)](https://coveralls.io/github/fabricasoftwares/pope?branch=master)
+[![Build Status](https://travis-ci.org/cpa-bayarea/pope.svg?branch=dev)](https://travis-ci.org/cpa-bayarea/pope)
+[![Coverage Status](https://coveralls.io/repos/github/fabricasoftwares/pope/badge.svg?branch=dev)](https://coveralls.io/github/fabricasoftwares/pope?branch=dev)
 
 Portal de pesquisa para serviços prestados por órgãos cadastrados.
 
@@ -14,24 +14,10 @@ O virtualenv do python isola as dependências de cada `ambiente` criado por ele,
 
 ## Para instalar as dependências do projeto
 
-As dependências estão listadas no arquivo `requirements.txt`
-
 ```bash
-
-pip install -r requirements.txt
+./setup.py install
 
 ```
-
-## Para montar o banco de dados que será utilizado
-
-```bash
-
-cd /path/to/project
-
-./manage.py migrate
-
-```
-
 
 ## Para rodar a aplicação local
 

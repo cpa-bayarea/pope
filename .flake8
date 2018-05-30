@@ -8,6 +8,7 @@ exclude =
     manage.py,
     migrations,
     settings,
+    setup.py,
     venv,
     falcon_back/__init__.py
 max-complexity = 10
