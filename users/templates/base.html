@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PoPe - Portal de Pesquisas</title>
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+
+    <header>
+      <nav>
+        <div class="nav-wrapper blue darken-4">
+          <a href="index.html" class="brand-logo white-text">PoPe - Portal de Pesquisas TJDFT</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      {% block main %}
+      {% endblock %}
+    </div>
+
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+      <div class="footer-copyright blue darken-4" style="width: 100%; text-align: center; height: 50px; padding-top: 15px;">
+        <a class="white-text center-align" href="https://cpa-bayarea.github.io">2018 - Desenvolvido por IESB - BayArea</a>
+      </div>
+    </footer>
+  </body>
+</html>
