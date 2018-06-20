@@ -3,6 +3,8 @@ include =
   pope/*
   users/*
   geographic/*
+  organizations/*
+  
 
 omit =
   *migrations*
@@ -13,6 +15,7 @@ include =
   pope/*
   users/*
   geographic/*
+  organizations/*
 
 omit =
   *migrations*

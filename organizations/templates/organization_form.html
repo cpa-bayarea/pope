@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main %}
+<!-- Form Organization HTML -->
+<div class="row" style="margin-top: 10%;">
+  <div class="container">
+    <form method="POST" class="col s12">
+      {% csrf_token %}
+      <div class="input-field row col s12">
+        <input name="org_name" id="org_name" type="text"  required>
+        <label for="org_name">Nome da Organização</label>
+      </div>
+      <div class="input-field row col s6">
+        <input name="cnpj" id="cnpj" type="text"  required>
+        <label for="cnpj">CNPJ</label>
+      </div>
+      <div class="input-field row col s6">
+        <input name="social_reason" id="social_reason" type="text"  required>
+        <label for="social_reason">Razão Social</label>
+      </div>
+      <div class="input-field row col s6">
+        <input name="email" type="email" id="email" class="validate" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field row col s6">
+        <input name="telephone" type="text" id="telephone"  required>
+        <label for="telephone">Telefone</label>
+      </div>
+      <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

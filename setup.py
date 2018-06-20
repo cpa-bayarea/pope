@@ -66,7 +66,7 @@ setup(
     scripts=['manage.py'],
     author='CPA - Bay Area',
     author_email='fabricasoftwares@gmail.com',
-    url='https://github.com/cpa-bayarea/pope',
+    url='https://www.bayareacpa.com.br',
     entry_points={
         'console_scripts': [
             'pope=manage:main'
