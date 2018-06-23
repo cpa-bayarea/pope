@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="row" style="margin-top: 10%;">
+  <div class="container">
+    <form method="POST" class="col s12">
+      {% csrf_token %}
+      <div class="input-field row col s12">
+        <input name="username" id="username" type="text" class="validate" required>
+        <label for="username">Nome de Usuário</label>
+      </div>
+
+      <div class="input-field row col s6">
+        <input name="password" id="password" type="password" class="validate" required>
+        <label for="password">Senha</label>
+      </div>
+
+      <div class="input-field row col s6">
+        <input name="password_confirmation" id="password_confirmation" type="password" class="validate" required>
+        <label for="password_confirmation">Confirmar Senha</label>
+      </div>
+
+      <div class="input-field row col s12">
+        <select name="user_type" id="user_type">
+          <option value="P">Prestador</option>
+          <option value="AG">Agente</option>
+        </select>
+        <label for="user_type">Tipo de Cadastro</label>
+      </div>
+      
+      <div class="input-field row col s12">
+        <input name="email" type="email" id="email" class="validate" required>
+        <label for="email">Email</label>
+      </div>
+
+      <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

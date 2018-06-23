@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="row" style="margin-top: 10%;">
+  <div class="container">
+    <form method="POST" class="col s12">
+      {% csrf_token %}
+      <div class="input-field row col s12">
+        <input id="username" type="text" class="validate" required>
+        <label for="username">Nome de Usuário</label>
+      </div>
+
+      <div class="input-field row col s12">
+        <input id="password" type="password" class="validate" required>
+        <label for="password">Senha</label>
+      </div>
+
+      <div class="row col s12">
+        <a href="#" class="grey-text text-darken-4 right">Esqueceu a senha?</a> 
+      </div>
+
+      <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
+        Entrar
+      </button>
+      <div class="row right">
+        Nova na organização? <a href="/new_user" class="grey-text text-darken-4">Solicite Cadastro.</a> 
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
