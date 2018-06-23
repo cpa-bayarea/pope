@@ -1,0 +1,10 @@
+[
+  {
+    "model": "geographic.State",
+    "pk": 1,
+    "fields": {
+      "name": "Distrito Federal",
+      "uf": "DF"
+    }
+  }
+]

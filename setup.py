@@ -8,7 +8,10 @@ from distutils.cmd import Command
 
 from setuptools import find_packages, setup
 
-
+APPS = [
+    'users',
+    'geographic',
+]
 class Migrate(Command):
     """Migrate the database and create sample users."""
     description = 'Makemigrations for PoPe models.' 
@@ -21,13 +24,30 @@ class Migrate(Command):
     def finalize_options(self):
         pass
 
+
+    for app in APPS:
+        sp.call('./manage.py makemigrations {}'.format(app).split())
+    sp.call('./manage.py migrate --noinput'.split())
+
+
+class LoadFixtures(Command):
+    """Load fixtures from all apps to the database."""
+    description = 'Populate database with default data.'
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
     def run(self):
-        cmds = [
-            './manage.py makemigrations users',
+        fixtures = [
+            './geographic/fixtures/states.json',
+            './geographic/fixtures/administrative_areas.json'
         ]
-        sp.call('./manage.py migrate --noinput'.split())
-        for cmd in cmds:
-            sp.call(cmd.split())
+        for data in fixtures:
+            sp.call('./manage.py loaddata {}'.format(data).split())
 
 
 setup(
@@ -71,5 +91,6 @@ setup(
     ],
     cmdclass={
         'install': Migrate,
+        'loaddb': LoadFixtures,
     }
 )
