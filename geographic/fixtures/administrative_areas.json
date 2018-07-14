@@ -1,6 +1,6 @@
 [
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 1,
     "fields": {
       "name": "Plano Piloto",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 2,
     "fields": {
       "name": "Gama",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 3,
     "fields": {
       "name": "Taguatinga",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 4,
     "fields": {
       "name": "Brazlândia",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 5,
     "fields": {
       "name": "Sobradinho",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 6,
     "fields": {
       "name": "Planaltina",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 7,
     "fields": {
       "name": "Paranoá",
@@ -63,16 +63,16 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 8,
     "fields": {
       "name": "Núcleo Bandeirante",
       "number": "VIII",
       "uf": "DF"
-  }
+    }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 9,
     "fields": {
       "name": "Ceilândia",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 10,
     "fields": {
       "name": "Guará",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 11,
     "fields": {
       "name": "Cruzeiro",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 12,
     "fields": {
       "name": "Samambaia",
@@ -108,7 +108,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 13,
     "fields": {
       "name": "Santa Maria",
@@ -117,7 +117,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 14,
     "fields": {
       "name": "São Sebastião",
@@ -126,7 +126,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 15,
     "fields": {
       "name": "Recanto das Emas",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 16,
     "fields": {
       "name": "Lago Sul",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 17,
     "fields": {
       "name": "Riacho Fundo",
@@ -153,7 +153,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 18,
     "fields": {
       "name": "Lago Norte",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 19,
     "fields": {
       "name": "Candagolândia",
@@ -171,7 +171,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 20,
     "fields": {
       "name": "Águas Claras",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 21,
     "fields": {
       "name": "Riacho Fundo II",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 22,
     "fields": {
       "name": "Sudoeste/Octogonal",
@@ -198,7 +198,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 23,
     "fields": {
       "name": "Varjão",
@@ -207,7 +207,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 24,
     "fields": {
       "name": "Park Way",
@@ -216,7 +216,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 25,
     "fields": {
       "name": "SCIA",
@@ -225,7 +225,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 26,
     "fields": {
       "name": "Sobradinho II",
@@ -234,7 +234,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 27,
     "fields": {
       "name": "Jardim Botânico",
@@ -243,7 +243,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 28,
     "fields": {
       "name": "Itapoã",
@@ -252,7 +252,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 29,
     "fields": {
       "name": "SIA",
@@ -261,7 +261,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 30,
     "fields": {
       "name": "Vicente Pires",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "model": "geographic.AdministrativeAreas",
+    "model": "geographic.AdministrativeArea",
     "pk": 31,
     "fields": {
       "name": "Fercal",

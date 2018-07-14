@@ -15,7 +15,6 @@ APPS = [
 class Migrate(Command):
     """Migrate the database and create sample users."""
     description = 'Makemigrations for PoPe models.' 
-
     user_options = []
 
     def initialize_options(self):
@@ -25,9 +24,10 @@ class Migrate(Command):
         pass
 
 
-    for app in APPS:
-        sp.call('./manage.py makemigrations {}'.format(app).split())
-    sp.call('./manage.py migrate --noinput'.split())
+    def run(self):
+        for app in APPS:
+            sp.call('./manage.py makemigrations {}'.format(app).split())
+        sp.call('./manage.py migrate --noinput'.split())
 
 
 class LoadFixtures(Command):
@@ -43,8 +43,7 @@ class LoadFixtures(Command):
 
     def run(self):
         fixtures = [
-            './geographic/fixtures/states.json',
-            './geographic/fixtures/administrative_areas.json'
+            'geographic/fixtures/administrative_areas.json'
         ]
         for data in fixtures:
             sp.call('./manage.py loaddata {}'.format(data).split())
@@ -54,21 +53,10 @@ setup(
     name='pope',
     version='0.1',
     install_requires=[
-        'celery==4.1.0',
-        'coreapi==2.3.1',
-        'django==1.11',
-        'django-cors-headers<2.2',
-        'django-filter==1.0.4,<1.1',
-        'django-rest-auth<1',
-        'djangorestframework==3.7.7',
-        'elasticsearch<5.5',
-        'elasticsearch-dsl>=5.0.0,<6.0.0',
+        'django==2.0',
         'markdown<=2.6',
         'Pillow<4.3',
-        'psycopg2<2.8',
-        'pycryptodomex<3.5',
         'requests<2.19',
-        'watson-developer-cloud==1.0.2',
     ],
     extras_require={
         'dev': ['flake8', 'astroid==1.5.3', 'rednose<1.3',
