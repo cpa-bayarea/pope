@@ -2,14 +2,18 @@
 include =
   pope/*
   users/*
+  geographic/*
 
 omit =
   *migrations*
+  *tests*
 
 [report]
 include =
   pope/*
   users/*
+  geographic/*
 
 omit =
   *migrations*
+  *tests*

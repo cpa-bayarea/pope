@@ -4,6 +4,7 @@ python:
 install: "pip install -r requirements.txt"
 before_script:
   - python setup.py install
+  - python setup.py loaddb
 script:
     - flake8
     - coverage run manage.py test
