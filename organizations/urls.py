@@ -5,6 +5,6 @@ from organizations.views import PopeOrganizationFormview
 
 
 urlpatterns = [
-    path('new_organization/', PopeOrganizationFormview.as_view(
-        template_name='organization_form.html'), name='new-organization')
+    path('new_organization/', PopeOrganizationFormview.as_view(),
+         name='new-organization')
 ]

@@ -1,29 +1,60 @@
 {% extends 'base.html' %}
 {% block main %}
+{% load compress %}
 <!-- Form Organization HTML -->
-<div class="row" style="margin-top: 10%;">
+<div class="row" style="margin-top: 10%; height: 90vh; overflow-y: auto;">
   <div class="container">
     <form method="POST" class="col s12">
       {% csrf_token %}
       <div class="input-field row col s12">
         <input name="org_name" id="org_name" type="text"  required>
         <label for="org_name">Nome da Organização</label>
+        {{ form.org_name.errors}}
       </div>
       <div class="input-field row col s6">
         <input name="cnpj" id="cnpj" type="text"  required>
         <label for="cnpj">CNPJ</label>
-      </div>
-      <div class="input-field row col s6">
-        <input name="social_reason" id="social_reason" type="text"  required>
-        <label for="social_reason">Razão Social</label>
-      </div>
-      <div class="input-field row col s6">
-        <input name="email" type="email" id="email" class="validate" required>
-        <label for="email">Email</label>
+        {{ form.cnpj.errors}}
       </div>
       <div class="input-field row col s6">
         <input name="telephone" type="text" id="telephone"  required>
         <label for="telephone">Telefone</label>
+        {{ form.telephone.errors}}
+      </div>
+      <div class="input-field row col s12">
+        <input name="social_reason" id="social_reason" type="text"  required>
+        <label for="social_reason">Razão Social</label>
+        {{ form.social_reason.errors}}
+      </div>
+      <div class="input-field row col s12">
+        <input name="email" type="email" id="email" required>
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="true">
+          {{ form.email.errors }}
+        </span>
+      </div>
+      <div class="input-field row col s3">
+        <input name="cep" type="text" id="cep" required>
+        <label for="cep">CEP</label>
+        <span class="helper-text" data-error="true" id="cep-error">
+          {{ form.cep.errors }}
+        </span>
+      </div>
+      <div class="input-field row col s1">
+        <button id="btn-cep" type="button" onclick="getLogradouro()" class="blue darken-2 waves-effect btn col">
+          <i class="material-icons">search</i>
+        </button>
+      </div>
+      <div class="input-field row col s12">
+        <input name="logradouro" type="text" id="logradouro" required readonly>
+        <label for="logradouro">Logradouro</label>
+      </div>
+      <div class="input-field row col s12">
+        <input name="additional_addr" type="text" id="additional_addr" required>
+        <label for="additional_addr">Complemento</label>
+        <span class="helper-text" data-error="true">
+          {{ form.additional_addr.errors }}
+        </span>
       </div>
       <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
         Enviar
@@ -31,4 +62,32 @@
     </form>
   </div>
 </div>
+{% compress js inline %}
+<script>
+let lastCep = '';
+function getLogradouro() {
+  const btnCep = document.getElementById('btn-cep');
+  const cep = document.getElementById('cep').value;
+  const cepError = document.getElementById('cep-error');
+  cepError.innerHTML = '';
+  
+  cep && lastCep !== cep && (btnCep.disabled = true);
+  cep && lastCep !== cep && fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
+    btnCep.disabled = false;
+    lastCep = cep;
+    if (data.error) {
+      cepError.innerHTML = 'CEP inválido.';
+      return;
+    }
+    const logradouroField = document.getElementById('logradouro');
+    logradouroField.value = data.logradouro;
+    logradouroField.focus();
+  }).catch(() => {
+    lastCep = cep;
+    btnCep.disabled = false;
+    cepError.innerHTML = 'CEP inválido.';
+  });
+}
+</script>
+{% endcompress %}
 {% endblock %}

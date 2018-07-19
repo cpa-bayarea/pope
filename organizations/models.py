@@ -13,5 +13,6 @@ class Organization(models.Model):
     email = models.EmailField(null=False, blank=False, default=False)
     telephone = models.CharField(max_length=11, null=False,
                                  blank=False, default=False)
-
-    REQUIRED_FIELDS = ['name', 'email', 'cnpj']
+    cep = models.CharField(max_length=8, null=False, blank=False)
+    additional_addr = models.CharField(max_length=50,
+                                       null=False, blank=False)

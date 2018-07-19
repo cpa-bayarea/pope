@@ -1,6 +1,5 @@
 from django.views.generic.edit import FormView
 
-
 from organizations.forms import PopeOrganizationForm
 
 

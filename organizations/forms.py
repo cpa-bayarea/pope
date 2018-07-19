@@ -9,4 +9,12 @@ class PopeOrganizationForm(ModelForm):
     class Meta:
         """Meta default."""
         model = Organization
-        fields = ['org_name', 'cnpj', 'social_reason', 'email', 'telephone']
+        fields = [
+            'org_name',
+            'cnpj',
+            'social_reason',
+            'email',
+            'telephone',
+            'cep',
+            'additional_addr'
+        ]
