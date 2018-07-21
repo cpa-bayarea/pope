@@ -8,16 +8,20 @@
       <div class="input-field row col s12">
         <input name="username" id="username" type="text" class="validate" required>
         <label for="username">Nome de Usuário</label>
+       <span class="helper-text red-text"> {{ form.username.errors }} </span>
       </div>
-
       <div class="input-field row col s6">
         <input name="password" id="password" type="password" class="validate" required>
         <label for="password">Senha</label>
+      <span class="helper-text red-text">  {{ form.password.errors }} </span>
       </div>
 
       <div class="input-field row col s6">
         <input name="password_confirmation" id="password_confirmation" type="password" class="validate" required>
         <label for="password_confirmation">Confirmar Senha</label>
+        
+      <span class="helper-text red-text">  {{ form.password_confirmation.errors }} </span>
+      
       </div>
 
       <div class="input-field row col s12">
@@ -26,11 +30,13 @@
           <option value="AG">Agente</option>
         </select>
         <label for="user_type">Tipo de Cadastro</label>
+        <span class="helper-text red-text"> {{ form.user_type.errors }} </span>
       </div>
       
       <div class="input-field row col s12">
         <input name="email" type="email" id="email" class="validate" required>
         <label for="email">Email</label>
+        <span class="helper-text red-text"> {{ form.email.errors }} </span>
       </div>
 
       <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
