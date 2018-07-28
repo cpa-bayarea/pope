@@ -54,6 +54,7 @@ setup(
     version='0.1',
     install_requires=[
         'django==2.0',
+        'django-compressor==2.2',
         'markdown<=2.6',
         'Pillow<4.3',
         'requests<2.19',
@@ -66,7 +67,7 @@ setup(
     scripts=['manage.py'],
     author='CPA - Bay Area',
     author_email='fabricasoftwares@gmail.com',
-    url='https://github.com/cpa-bayarea/pope',
+    url='https://www.bayareacpa.com.br',
     entry_points={
         'console_scripts': [
             'pope=manage:main'
