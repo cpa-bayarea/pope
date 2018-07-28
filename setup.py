@@ -54,7 +54,7 @@ setup(
     version='0.1',
     install_requires=[
         'django==2.0',
-        'django-compressor==2.2'
+        'django-compressor==2.2',
         'markdown<=2.6',
         'Pillow<4.3',
         'requests<2.19',
