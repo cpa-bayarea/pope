@@ -7,6 +7,7 @@ from organizations.validators import validate_CNPJ
 
 class TestCNPJValidator(unittest.TestCase):
     """Testing CNPJ validator."""
+
     def test_valid_cnpj(self):
         """Tests for valid CNPJs."""
         test_load = [

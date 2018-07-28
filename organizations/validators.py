@@ -1,5 +1,4 @@
 """Custom validators for pope Organizations """
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 
 
@@ -24,5 +23,5 @@ def validate_CNPJ(value):
 
     if value[-2:] != '{}{}'.format(first_digit, second_digit):
         raise ValidationError('CNPJ inválido')
-    
-    return value 
+
+    return value
