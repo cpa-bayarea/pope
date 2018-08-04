@@ -3,14 +3,16 @@
 <div class="row" style="margin-top: 10%;">
   <div class="container">
     <form method="POST" class="col s12" action="{% url 'login' %}">
-      {% csrf_token %}
+      {% csrf_token %} {% if form.errors %}
+      <span class="helper-text red-text">Usuário ou senha incorretos.</span>
+      {% endif %}
       <div class="input-field row col s12">
-        <input id="username" type="text" class="validate" required>
+        <input id="username" name="username" type="text" class="validate" required>
         <label for="username">Nome de Usuário</label>
       </div>
 
       <div class="input-field row col s12">
-        <input id="password" type="password" class="validate" required>
+        <input id="password" name="password" type="password" class="validate" required>
         <label for="password">Senha</label>
       </div>
 

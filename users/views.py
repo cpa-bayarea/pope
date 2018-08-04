@@ -1,5 +1,6 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.forms import ValidationError
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
 
@@ -27,7 +28,7 @@ class PopeUserFormView(FormView):
         confirm_password = cleaned_data.get('confirm_password')
 
         if password != confirm_password:
-            raise forms.ValidationError(
+            raise ValidationError(
                 'Confirmação de senha não confere com a senha'
             )
 
