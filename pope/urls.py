@@ -20,7 +20,6 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     path('', include('users.urls')),
     path('', include('organizations.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

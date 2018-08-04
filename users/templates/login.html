@@ -1,9 +1,8 @@
-{% extends 'base.html' %}
-{% block main %}
+{% extends 'base.html' %} {% block main %}
 
 <div class="row" style="margin-top: 10%;">
   <div class="container">
-    <form method="POST" class="col s12">
+    <form method="POST" class="col s12" action="{% url 'login' %}">
       {% csrf_token %}
       <div class="input-field row col s12">
         <input id="username" type="text" class="validate" required>
@@ -16,14 +15,14 @@
       </div>
 
       <div class="row col s12">
-        <a href="#" class="grey-text text-darken-4 right">Esqueceu a senha?</a> 
+        <a href="#" class="grey-text text-darken-4 right">Esqueceu a senha?</a>
       </div>
 
       <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
         Entrar
       </button>
       <div class="row right">
-        <a href="/new_user" class="grey-text text-darken-4"> Nova na organização? Solicite Cadastro.</a> 
+        <a href="{% url 'new-user' %}" class="grey-text text-darken-4"> Novo usuário? Solicite Cadastro.</a>
       </div>
     </form>
   </div>
