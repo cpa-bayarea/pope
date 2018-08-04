@@ -11,10 +11,14 @@ from setuptools import find_packages, setup
 APPS = [
     'users',
     'geographic',
+    'organizations',
+    'services',
 ]
+
+
 class Migrate(Command):
     """Migrate the database and create sample users."""
-    description = 'Makemigrations for PoPe models.' 
+    description = 'Makemigrations for PoPe models.'
     user_options = []
 
     def initialize_options(self):
@@ -22,7 +26,6 @@ class Migrate(Command):
 
     def finalize_options(self):
         pass
-
 
     def run(self):
         for app in APPS:
