@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'geographic',
     'organizations',
+    'services',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Custom user model
 AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = 'dashboard'
 
 
 # Internationalization
