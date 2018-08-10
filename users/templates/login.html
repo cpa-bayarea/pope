@@ -1,33 +1,39 @@
 {% extends 'base.html' %} {% block main %}
-
-<div class="row" style="margin-top: 10%;">
-  <div class="container">
-    <form method="POST" class="col s12" action="{% url 'login' %}">
-      {% csrf_token %} {% if form.errors %}
-      <span class="helper-text red-text">Usuário ou senha incorretos.</span>
-      {% endif %}
-      <div class="input-field row col s12">
-        <input id="username" name="username" type="text" class="validate" required>
-        <label for="username">Nome de Usuário</label>
+<!-- Formulario de acesso ao portal de pesquisas -->
+<div class="row center-align" style="margin-top:1%">
+  <div class="col s12 m8 l6 offset-m2 offset-l3">
+    <div class="card z-depth-5">
+      <div class="card-content black-text">
+        <span class="card-title">Portal de Pesquisas Login</span>
+        <span><img src="../../static/logo.png" width="150px" height="150px"  alt="logo"></span>
+        <div class="row">
+            <div class="container">
+              <form method="POST" class="col s12" action="{% url 'login' %}">
+                {% csrf_token %} {% if form.errors %}
+                <span class="helper-text red-text">Usuário ou senha incorretos.</span>
+                {% endif %}
+                <div class="input-field row col s12">
+                  <input id="username" name="username" type="text" class="validate" required>
+                  <label for="username"> <i class="material-icons">person</i> Nome de Usuário</label>
+                </div>
+                <div class="input-field row col s12">
+                  <input id="password" name="password" type="password" class="validate" required>
+                  <label for="password"> <i class="material-icons">security</i> Senha</label>
+                </div>
+                <div class="row col s12">
+                  <a href="#" class="grey-text text-darken-4 right">Esqueceu a senha?</a>
+                </div>
+                <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
+                  Entrar
+                </button>
+                <div class="row right">
+                  <a href="{% url 'new-user' %}" class="grey-text text-darken-4"> Ainda não possui cadastro? Solicite Cadastro.</a>
+                </div>
+              </form>
+            </div>
+          </div>
       </div>
-
-      <div class="input-field row col s12">
-        <input id="password" name="password" type="password" class="validate" required>
-        <label for="password">Senha</label>
-      </div>
-
-      <div class="row col s12">
-        <a href="#" class="grey-text text-darken-4 right">Esqueceu a senha?</a>
-      </div>
-
-      <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
-        Entrar
-      </button>
-      <div class="row right">
-        <a href="{% url 'new-user' %}" class="grey-text text-darken-4"> Novo usuário? Solicite Cadastro.</a>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
-
 {% endblock %}
