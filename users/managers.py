@@ -20,7 +20,8 @@ class PopeUserManager(BaseUserManager):
         """Create a non-super nor staff user, set as inactive."""
         extra_fields.setdefault('is_staff', False)
         extra_fields.setdefault('is_superuser', False)
-        extra_fields.setdefault('is_active', False)
+        extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('is_authorized', False)
 
         return self._create_user(username, email, password, **extra_fields)
 
@@ -29,6 +30,7 @@ class PopeUserManager(BaseUserManager):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('is_authorized', True)
         extra_fields.setdefault('user_type', 'A')
 
         if extra_fields.get('is_staff') is not True:

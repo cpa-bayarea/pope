@@ -16,7 +16,8 @@ class TestUser(TestCase):
 
         self.assertEqual(user.username, 'test')
         self.assertEqual(user.user_type, 'P')
-        self.assertEqual(user.is_active, False)
+        self.assertEqual(user.is_active, True)
+        self.assertEqual(user.is_authorized, False)
 
     def test_superuser_default_fields(self):
         """Test if the superuser is created with the default fields."""
@@ -29,5 +30,6 @@ class TestUser(TestCase):
         self.assertEqual(user.username, 'test')
         self.assertEqual(user.user_type, 'A')
         self.assertEqual(user.is_active, True)
+        self.assertEqual(user.is_authorized, True)
         self.assertEqual(user.is_staff, True)
         self.assertEqual(user.is_superuser, True)
