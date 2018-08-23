@@ -1,6 +1,8 @@
 {% load static %}
 <!DOCTYPE html>
+
 <html>
+<!-- Basic html for Users dashboard -->
 
 <head>
     <title>PoPe - Portal de Pesquisas</title>
@@ -12,18 +14,86 @@
 </head>
 
 <body>
-    <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
-    </script>
-            <ul id="nav-mobile" class="sidenav sidenav-fixed" style="overflow: auto; transform: translateX(0%);">
-        <li class="logo">
+    <header>
+        <nav>
+            <div class="nav-wrapper blue darken-4">
+                <div class="container">
+                    <a href="#!" class="brand-logo">TJDFT</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+
+                            <a href="#">
+                                Perfil
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Minha organização
+                                <i class="material-icons">group</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Configurações
+                                <i class="material-icons">build</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Sair
+                                <i class="material-icons">exit_to_app</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <ul class="sidenav" id="mobile-demo">
+        <div class="user-view">
+            <div class="background" style="background-image: linear-gradient(to right, #2515f0 0%, #2575fc 100%);">
+            </div>
+            <a href="#user">
+                <img class="circle" alt="user-image" src="">
+            </a>
+            <a href="#name">
+                <span class=" white-text name">
+                    <b> Nome do Usuário </b>
+                </span>
+            </a>
+            <a href="#email">
+                <span class="email white-text">
+                    <span class="fa fa-envelope"></span> email@gmail.com</span>
+            </a>
+            <a href="#location">
+                <span class="email white-text">
+                    <span class="fa fa-map-marker-alt"></span> Brasilia, Brazil</span>
+            </a>
+        </div>
+        <li>
+            <a href="#">Perfil
+                <i class="material-icons">person</i>
+            </a>
         </li>
-        <li class="bold">
-            <a href="{% url 'dashboard' %}" class="waves-effect waves-teal">Principal</a>
+        <li>
+            <a href="#">Minha organização
+                <i class="material-icons">group</i>
+            </a>
+        </li>
+        <li>
+            <a href="#">Configurações
+                <i class="material-icons">build</i>
+            </a>
+        </li>
+        <li>
+            <a href="#">Sair
+                <i class="material-icons">exit_to_app</i>
+            </a>
         </li>
     </ul>
+
     <main>
         <div class="container">
             <div class="row">
@@ -31,6 +101,12 @@
             </div>
         </div>
     </main>
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
 </body>
 
 </html>
