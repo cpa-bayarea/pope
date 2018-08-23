@@ -1,19 +1,19 @@
 {% extends 'base.html' %} {% block main %} {% load compress %}
 <!-- Form Organization HTML -->
 <div class="row center-align" style="margin-top:1%">
-  <div class="col s12 m8 l6 offset-m2 offset-l3">
+  <div class="col s12 m12 l12">
     <div class="card z-depth-5">
       <div class="card-content black-text">
         <span class="card-title">Cadastro de Organização</span>
         <i class="large material-icons">people</i>
         <div class="row">
           <div class="container">
-            <form method="POST" class="col s12" action="{% url 'new-organization' %}">
+            <form method="POST" class="col s12 l12" action="{% url 'new-organization' %}">
               {% csrf_token %}
               <span class="helper-text red-text col s12 l12" data-error="true">
-                <span class="helper-text red-text col s12 l6">{{ form.org_name.errors}}</span>
-                <span class="helper-text red-text col s12 l6" data-error="true">
-                  <span class="helper-text red-text col s12 l6" data-error="true">
+                <span class="helper-text red-text col s12 l12">{{ form.org_name.errors}}</span>
+                <span class="helper-text red-text col s12 l12" data-error="true">
+                  <span class="helper-text red-text col s12 l12" data-error="true">
                     {{ form.email.errors }}
                   </span>
 
@@ -28,21 +28,16 @@
 
                 {{ form.cnpj.errors}}
               </span>
-              <span class="helper-text red-text col s12 l12" data-error="true">
+              <span class="helper-text red-text col s12 l6" data-error="true">
                 {{ form.additional_addr.errors }}
               </span>
 
-              <span>
-                <h6> Dados da Organização</h6>
-                <i class="material-icons" style="font-size: 40px;">account_balance</i>
-              </span>
-              <hr>
-              <div class="input-field row col s12">
+              <div class="input-field row col s12 l7">
                 <input name="org_name" id="org_name" type="text" required>
                 <label for="org_name">
                   <i class="material-icons">business</i> Nome da Organização</label>
               </div>
-              <div class="input-field row col s12 l6">
+              <div class="input-field row col s12 l5">
                 <input name="cnpj" id="cnpj" type="text" required>
                 <label for="cnpj">
                   <i class="material-icons">assignment</i> CNPJ</label>
@@ -65,12 +60,7 @@
                 <label for="email">
                   <i class="material-icons">contact_mail</i> Email</label>
               </div>
-              <span>
-                <h6> Localização da Organização</h6>
-                <i class="material-icons" style="font-size: 40px;">map</i>
-              </span>
-              <hr>
-              <div class="input-field row col s11 l5">
+              <div class="input-field row col s10 l4">
                 <input name="cep" type="text" id="cep" required>
                 <label for="cep">
                   <i class="material-icons">location_on</i> CEP</label>
@@ -85,7 +75,8 @@
                 <label for="logradouro">
                   <i class="material-icons">location_on</i> Logradouro</label>
               </div>
-              <div class="input-field row col s12 l12">
+
+              <div class="input-field row col s12 l6">
                 <input name="additional_addr" type="text" id="additional_addr" required>
                 <label for="additional_addr">
                   <i class="material-icons">location_on</i> Complemento</label>

@@ -1,29 +1,31 @@
 {% extends 'base.html' %} {% block main %}
+
 <!-- Formulário Para o cadastro dos usuarios de nicel Prestador e Agente -->
 <div class="row center-align" style="margin-top:1%">
   <div class="col s12 m8 l6 offset-m2 offset-l3">
     <div class="card z-depth-5">
       <div class="card-content black-text">
         <span class="card-title">Formulário de Cadastro</span>
-        <span><img src="../../static/logo.png" width="150px" height="150px"  alt="logo"></span>
-        <hr>
+        <span>
+          <img src="../../static/logo.png" width="70px" height="75px" alt="logo">
+        </span>
         <div class="row">
           <div class="container">
             <form method="POST" class="col s12" action="{% url 'new-user' %}">
               {% csrf_token %}
-              <div class="input-field row col s12">
+              <div class="input-field row col s12 l12">
                 <input name="username" id="username" type="text" class="validate" required>
                 <label for="username">
                   <span class="material-icons">person</span> Nome de Usuário </label>
                 <span class="helper-text red-text"> {{ form.username.errors }} </span>
               </div>
-              <div class="input-field row col s12">
+              <div class="input-field row col s12 l6">
                 <input name="password" id="password" type="password" class="validate" required>
                 <label for="password">
                   <span class="material-icons">security</span>Senha</label>
                 <span class="helper-text red-text"> {{ form.password.errors }} </span>
               </div>
-              <div class="input-field row col s12">
+              <div class="input-field row col s12 l6">
                 <input name="password_confirmation" id="password_confirmation" type="password" class="validate" required>
                 <label for="password_confirmation">
                   <span class="material-icons">security</span>Confirmar Senha</label>
@@ -38,8 +40,6 @@
                   <span class="material-icons">assignment
                   </span> Tipo de Cadastro</label>
                 <span class="helper-text red-text"> {{ form.user_type.errors }} </span>
-
-
               </div>
               <div class="input-field row col s12">
                 <input name="email" type="email" id="email" class="validate" required>
