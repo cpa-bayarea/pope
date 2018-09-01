@@ -13,77 +13,89 @@
               <span class="helper-text red-text col s12 l12" data-error="true">
                 <span class="helper-text red-text col s12 l12">{{ form.org_name.errors}}</span>
                 <span class="helper-text red-text col s12 l12" data-error="true">
+        
                   <span class="helper-text red-text col s12 l12" data-error="true">
                     {{ form.email.errors }}
                   </span>
 
-                  {{ form.social_reason.errors}}
-                </span>
-                <span class="helper-text red-text col s12 l6" data-error="true">
-                  {{ form.telephone.errors}}
-                </span>
-                <span class="helper-text red-text col s12 l6" data-error="true" id="cep-error">
-                  {{ form.cep.errors }}
-                </span>
+                  <span class="helper-text red-text col s12 l6" data-error="true">
+                    {{ form.telephone.errors}}
+                  </span>
+        
+                  <span class="helper-text red-text col s12 l6" data-error="true" id="cep-error">
+                    {{ form.cep.errors }}
+                  </span>
+        
+                  <span class="helper-text red-text col s12 l6" data-error="true">
+                    {{ form.additional_addr.errors }}
+                  </span>
 
-                {{ form.cnpj.errors}}
-              </span>
-              <span class="helper-text red-text col s12 l6" data-error="true">
-                {{ form.additional_addr.errors }}
-              </span>
+                  <div class="input-field row col s12 l7">
+                    <input name="org_name" id="org_name" type="text" required>
+                    <label for="org_name">
+                      <i class="material-icons">business</i> Nome da Organização</label>
+                  </div>
 
-              <div class="input-field row col s12 l7">
-                <input name="org_name" id="org_name" type="text" required>
-                <label for="org_name">
-                  <i class="material-icons">business</i> Nome da Organização</label>
-              </div>
-              <div class="input-field row col s12 l5">
-                <input name="cnpj" id="cnpj" type="text" required>
-                <label for="cnpj">
-                  <i class="material-icons">assignment</i> CNPJ</label>
+                  <div class="input-field row col s12 l5">
+                    <input name="telephone" type="text" id="telephone" required>
+                    <label for="telephone">
+                      <i class="material-icons">contact_phone</i> Telefone</label>
+                  </div>
 
-              </div>
-              <div class="input-field row col s12 l6">
-                <input name="social_reason" id="social_reason" type="text" required>
-                <label for="social_reason">
-                  <i class="material-icons">group</i> Razão Social</label>
-              </div>
+                  <div class="input-field row col s12 l6">
+                    <input name="email" type="email" id="email" required>
+                    <label for="email">
+                      <i class="material-icons">contact_mail</i> Email</label>
+                  </div>
 
-              <div class="input-field row col s12 l6">
-                <input name="telephone" type="text" id="telephone" required>
-                <label for="telephone">
-                  <i class="material-icons">contact_phone</i> Telefone</label>
-              </div>
+                  <div class="input-field row col s10 l4">
+                    <input name="cep" type="text" id="cep">
+                    <label for="cep">
+                      <i class="material-icons">location_on</i> CEP</label>
+                  </div>
 
-              <div class="input-field row col s12 l6">
-                <input name="email" type="email" id="email" required>
-                <label for="email">
-                  <i class="material-icons">contact_mail</i> Email</label>
-              </div>
-              <div class="input-field row col s10 l4">
-                <input name="cep" type="text" id="cep" required>
-                <label for="cep">
-                  <i class="material-icons">location_on</i> CEP</label>
-              </div>
-              <div class="input-field row col s1 l2">
-                <button id="btn-cep" type="button" onclick="getLogradouro()" class="blue darken-2 waves-effect btn col">
-                  <i class="material-icons">search</i>
-                </button>
-              </div>
-              <div class="input-field row col s12 l6">
-                <input name="logradouro" type="text" id="logradouro" required readonly>
-                <label for="logradouro">
-                  <i class="material-icons">location_on</i> Logradouro</label>
-              </div>
+                  <div class="input-field row col s1 l2">
+                    <button id="btn-cep" type="button" onclick="getLogradouro()" class="blue darken-2 waves-effect btn col">
+                      <i class="material-icons">search</i>
+                    </button>
+                  </div>
 
-              <div class="input-field row col s12 l6">
-                <input name="additional_addr" type="text" id="additional_addr" required>
-                <label for="additional_addr">
-                  <i class="material-icons">location_on</i> Complemento</label>
-              </div>
-              <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
-                Enviar
-              </button>
+                  <div class="input-field row col s12 l6">
+                    <input name="neighbourhood" type="text" id="neighbourhood" required>
+                    <label for="neighbourhood">
+                      <i class="material-icons">location_on</i> Bairro </label>
+                  </div>
+
+                  <div class="input-field row col s12 l6">
+                    <input name="addr" type="text" id="addr" required>
+                    <label for="addr">
+                      <i class="material-icons">location_on</i> Logradouro</label>
+                  </div>
+
+                  <div class="input-field row col s12 l4">
+                    <input name="additional_addr" type="text" id="additional_addr" required>
+                    <label for="additional_addr">
+                      <i class="material-icons">location_on</i> Complemento</label>
+                  </div>
+
+                  <div class="input-field row col s12 l4">
+                    <input name="time_from" type="time" id="time_from" required>
+                    <label for="time_from">
+                      <i class="material-icons">access_time</i>Horario de Abertura</label>
+                  </div>
+
+                  <div class="input-field row col s12 l4">
+                    <input name="time_to" type="time" id="time_to" required>
+                    <label for="time_to">
+                      <i class="material-icons">access_time</i> Horario de encerramento</label>
+                  </div>
+                  
+
+
+                  <button class="blue darken-4 waves-effect waves-light btn col s12 row" type="submit">
+                    Enviar
+                  </button>
+
             </form>
           </div>
         </div>
