@@ -12,11 +12,11 @@ class User(AbstractUser):
     """
     USER_TYPE_CHOICES = (
         ('A', 'Admin'),
-        ('AG', 'Agente'),
+        ('M', 'Maintainer'),
     )
 
     user_type = models.CharField(max_length=3, null=False,
-                                 blank=False, default='P')
+                                 blank=False, default='M')
     is_active = models.BooleanField(null=False, default=True)
     is_authorized = models.BooleanField(null=False, default=False)
 

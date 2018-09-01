@@ -15,7 +15,7 @@ class TestUser(TestCase):
         )
 
         self.assertEqual(user.username, 'test')
-        self.assertEqual(user.user_type, 'P')
+        self.assertEqual(user.user_type, 'M')
         self.assertEqual(user.is_active, True)
         self.assertEqual(user.is_authorized, False)
 

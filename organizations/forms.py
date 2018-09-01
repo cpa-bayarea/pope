@@ -11,10 +11,10 @@ class PopeOrganizationForm(ModelForm):
         model = Organization
         fields = [
             'org_name',
-            'cnpj',
-            'social_reason',
             'email',
             'telephone',
             'cep',
+            'neighbourhood',
+            'addr',
             'additional_addr'
         ]
