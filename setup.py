@@ -61,6 +61,9 @@ setup(
         'markdown<=2.6',
         'Pillow<4.3',
         'requests<2.19',
+        'djangorestframework',
+        'markdown',
+        'django-filter'
     ],
     extras_require={
         'dev': ['flake8', 'astroid==1.5.3', 'rednose<1.3',
