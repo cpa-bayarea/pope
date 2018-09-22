@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('organizations/', include('organizations.urls')),
     path('geo/', include('geographic.urls')),
+    path('services/', include('services.urls')),
     url(r'^api-auth/', views.obtain_auth_token),
     url(r'^docs/', include_docs_urls(title='API PoPe')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
