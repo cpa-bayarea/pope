@@ -8,6 +8,7 @@ class OrganizationSerializer(serializers.ModelSerializer):
         model = Organization
         fields = '__all__'
 
+
 class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Schedule

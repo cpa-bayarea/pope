@@ -4,7 +4,7 @@ from rest_framework import viewsets
 from organizations.forms import PopeOrganizationForm
 from organizations.models import Organization, Schedule
 from organizations.serializers import (OrganizationSerializer,
-                                      ScheduleSerializer)
+                                       ScheduleSerializer)
 
 
 class PopeOrganizationFormview(FormView):

@@ -21,4 +21,4 @@ class SubareaViewSet(viewsets.ModelViewSet):
 class ServiceViewSet(viewsets.ModelViewSet):
     """Views for service endpoints."""
     queryset = Service.objects.all()
-    serializer_class = SubareaSerializer
+    serializer_class = ServiceSerializer
