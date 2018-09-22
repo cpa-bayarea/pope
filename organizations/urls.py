@@ -7,7 +7,7 @@ from organizations.views import (PopeOrganizationFormview,
                                  ScheduleViewset)
 
 router  = SimpleRouter()
-router.register(r'^', OrganizationViewset)
-router.register(r'^schedules', ScheduleViewset)
+router.register('', OrganizationViewset)
+router.register('schedules', ScheduleViewset)
 
 urlpatterns = router.urls

@@ -18,10 +18,13 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
 from rest_framework.authtoken import views
+from rest_framework.documentation import include_docs_urls
 
 
 urlpatterns = [
     path('', include('users.urls')),
-    path('organizations', include('organizations.urls')),
-    url(r'^api-auth/', views.obtain_auth_token)
+    path('organizations/', include('organizations.urls')),
+    path('geo/', include('geographic.urls')),
+    url(r'^api-auth/', views.obtain_auth_token),
+    url(r'^docs/', include_docs_urls(title='API PoPe')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

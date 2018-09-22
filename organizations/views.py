@@ -18,10 +18,12 @@ class PopeOrganizationFormview(FormView):
 
 
 class OrganizationViewset(viewsets.ModelViewSet):
+    """Views for organization endpoints."""
     queryset = Organization.objects.all()
     serializer_class = OrganizationSerializer
 
 
 class ScheduleViewset(viewsets.ModelViewSet):
+    """Views for schedule endpoints."""
     queryset = Schedule.objects.all()
     serializer_class = ScheduleSerializer
