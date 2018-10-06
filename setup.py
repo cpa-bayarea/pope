@@ -56,7 +56,7 @@ setup(
     name='pope',
     version='1.0',
     install_requires=[
-        'django==2.1',
+        'django~>2.1',
         'django-compressor==2.2',
         'markdown<=2.6',
         'Pillow<4.3',
@@ -86,7 +86,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     cmdclass={
-        'install': Migrate,
-        'loaddb': LoadFixtures,
+        'migrate': Migrate,
+        'loaddb': LoadFixtures
     }
 )
