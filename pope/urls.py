@@ -14,11 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.conf.urls import include
+from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
+from rest_framework.authtoken import views
+from rest_framework.documentation import include_docs_urls
+
 
 urlpatterns = [
     path('', include('users.urls')),
-    path('', include('organizations.urls'))
+    path('organizations/', include('organizations.urls')),
+    path('geo/', include('geographic.urls')),
+    path('services/', include('services.urls')),
+    url(r'^api-auth/', views.obtain_auth_token),
+    url(r'^docs/', include_docs_urls(title='API PoPe')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
