@@ -86,7 +86,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     cmdclass={
-        'install': Migrate,
-        'loaddb': LoadFixtures,
+        'migrate': Migrate,
+        'loaddb': LoadFixtures
     }
 )
