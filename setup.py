@@ -56,7 +56,7 @@ setup(
     name='pope',
     version='1.0',
     install_requires=[
-        'django==2.1',
+        'django>2.1<3',
         'django-compressor==2.2',
         'markdown<=2.6',
         'Pillow<4.3',
