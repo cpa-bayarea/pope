@@ -54,16 +54,16 @@ class LoadFixtures(Command):
 
 setup(
     name='pope',
-    version='0.1',
+    version='1.0',
     install_requires=[
-        'django==2.0',
+        'django==2.1',
         'django-compressor==2.2',
         'markdown<=2.6',
         'Pillow<4.3',
         'requests<2.19',
-        'djangorestframework',
-        'django-filter',
-        'coreapi',
+        'djangorestframework==3.8.2',
+        'django-filter>=1.0.1',
+        'coreapi>=1.32',
         'pygments'
     ],
     extras_require={
