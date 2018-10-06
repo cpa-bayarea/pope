@@ -1,7 +1,7 @@
 language: python
 python:
     - "3.6"
-install: "pip install -r requirements.txt"
+install: "pip install -e .[dev]"
 before_script:
   - python setup.py install
   - python setup.py loaddb

@@ -1,10 +1,11 @@
 """Urls related to views for the organizations app."""
-from django.urls import path
+from rest_framework.routers import SimpleRouter
 
-from organizations.views import PopeOrganizationFormview
+from organizations.views import (OrganizationViewset,
+                                 ScheduleViewset)
 
+router = SimpleRouter()
+router.register('', OrganizationViewset)
+router.register('schedules', ScheduleViewset)
 
-urlpatterns = [
-    path('new_organization/', PopeOrganizationFormview.as_view(),
-         name='new-organization')
-]
+urlpatterns = router.urls
