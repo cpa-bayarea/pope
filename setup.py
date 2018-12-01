@@ -65,7 +65,8 @@ setup(
         'django-filter>=1.0.1',
         'coreapi>=1.32',
         'pygments',
-        'django-cors-headers>=2.4.0'
+        'django-cors-headers>=2.4.0',
+        'flake8'
     ],
     extras_require={
         'dev': ['flake8', 'astroid==1.5.3', 'rednose<1.3',
