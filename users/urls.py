@@ -1,16 +1,11 @@
 """Urls related to views for the users app."""
-from django.urls import path
-from django.contrib.auth import views as auth_views
+from rest_framework.routers import SimpleRouter
 
-from users.views import PopeUserFormView, DashboardView
+from users.views import ProfileViewSet, UserViewSet
 
 
-urlpatterns = [
-    path('', DashboardView.as_view(), name='dashboard'),
-    path(
-        'login/',
-        auth_views.LoginView.as_view(template_name='login.html'),
-        name='login'
-    ),
-    path('new_user/', PopeUserFormView.as_view(), name='new-user')
-]
+router = SimpleRouter()
+router.register('profile', ProfileViewSet, base_name='profile')
+router.register('users', UserViewSet, base_name='users')
+
+urlpatterns = router.urls
