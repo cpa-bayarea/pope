@@ -1,0 +1,7 @@
+*.swp
+*__pycache__*
+*.egg-info*
+dist/
+build/
+htmlcov/
+*.md
