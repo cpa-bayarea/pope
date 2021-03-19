@@ -61,7 +61,7 @@ setup(
         'markdown<=2.6',
         'Pillow<4.3',
         'requests>=2.20',
-        'djangorestframework==3.8.2',
+        'djangorestframework==3.11.2',
         'django-filter>=1.0.1',
         'coreapi>=1.32',
         'pygments',
